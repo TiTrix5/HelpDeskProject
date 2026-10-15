@@ -1,0 +1,94 @@
+/* ДИЗАЙНЕР: единый стиль приложения. Цвета заданы переменными - легко поменять. */
+:root {
+  --bg: #f3f5f9;
+  --card: #ffffff;
+  --main: #4f6df5;
+  --text: #222a3a;
+  --muted: #7a8499;
+  --new: #f5a623;
+  --progress: #4f6df5;
+  --done: #2fb170;
+  --danger: #e5484d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--main);
+  color: #fff;
+  text-align: center;
+  padding: 24px 12px;
+}
+header h1 { margin: 0 0 4px; }
+header p { margin: 0; opacity: .9; }
+
+main {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 12px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+.card h2 { margin-top: 0; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #d5dae5;
+  border-radius: 8px;
+  font: inherit;
+}
+input:focus, textarea:focus { outline: 2px solid var(--main); border-color: transparent; }
+
+button {
+  background: var(--main);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { opacity: .9; }
+
+.error { color: var(--danger); min-height: 1em; margin: 8px 0 0; }
+
+.filters { margin-bottom: 12px; }
+.filters button {
+  background: #e8ecf6;
+  color: var(--text);
+  margin-right: 6px;
+  padding: 6px 12px;
+}
+.filters button.active { background: var(--main); color: #fff; }
+
+.ticket {
+  border: 1px solid #e3e7f0;
+  border-left: 5px solid var(--new);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+.ticket.IN_PROGRESS { border-left-color: var(--progress); }
+.ticket.DONE { border-left-color: var(--done); }
+
+.ticket h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.ticket .meta { color: var(--muted); font-size: .85rem; margin-bottom: 6px; }
+.ticket .desc { white-space: pre-wrap; margin-bottom: 8px; }
+.ticket select { padding: 6px; border-radius: 6px; border: 1px solid #d5dae5; font: inherit; }
+
+.empty { color: var(--muted); text-align: center; padding: 16px; }
