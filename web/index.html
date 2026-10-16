@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helpdesk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛠 Helpdesk</h1>
+    <p>Служба поддержки: создайте заявку, и мы поможем</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Новая заявка</h2>
+      <input id="author" placeholder="Ваше имя" maxlength="50">
+      <input id="title" placeholder="Тема заявки" maxlength="100">
+      <textarea id="description" placeholder="Опишите проблему" rows="4"></textarea>
+      <button id="createBtn">Отправить заявку</button>
+      <p id="error" class="error"></p>
+    </section>
+
+    <section class="card">
+      <h2>Заявки</h2>
+      <div class="filters">
+        <button data-filter="ALL" class="active">Все</button>
+        <button data-filter="NEW">Новые</button>
+        <button data-filter="IN_PROGRESS">В работе</button>
+        <button data-filter="DONE">Готово</button>
+      </div>
+      <div id="list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
