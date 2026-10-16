@@ -82,6 +82,7 @@ run.bat
 Убедитесь, что Docker установлен и запущен. Выполните команды из корневой папки проекта:
 
 ```bash
+mvn clean package
 docker build -t helpdesk .
 docker run --rm -p 8080:8080 helpdesk
 ```
