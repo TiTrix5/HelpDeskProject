@@ -1,4 +1,3 @@
-
 # Этап 1: сборка приложения с помощью Maven и JDK 17
 FROM maven:3.9-eclipse-temurin-17 AS build
 
